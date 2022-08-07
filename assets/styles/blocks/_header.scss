@@ -1,0 +1,115 @@
+.header{
+    &-container{
+        padding: 30px 0;
+    }
+
+
+    &__menu{
+        display: flex;
+        align-items: center;
+
+
+        .logo-link{
+            margin-right: 95px;
+        }
+
+
+        .nav{
+            &__list{
+                display: flex;
+            }
+
+
+            &__item{
+                margin-right: 30px;
+                &:last-child{
+                    margin-right: 50px;
+                }
+            }
+
+
+            &__link{
+                position: relative;
+                font-family: $fontKarla;
+                font-weight: 400;
+                color: $colorPrimary;
+                @include fontSize(12);
+                @include remLh(18);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                transition: color .3s ease-in-out;
+
+
+                &:hover, &:active{
+                    color: $colorSecondary;
+                }
+            }
+        }
+
+
+        .cart{
+            position: relative;
+            display: flex;
+            align-items: center;
+
+
+            &-img{
+                margin-right: 10px;
+            }
+
+
+            &-name{
+                margin-right: 8px;
+                text-transform: uppercase;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(12);
+                @include remLh(18);
+                letter-spacing: 2px;
+            }
+
+
+            &-count{
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(11);
+                @include remLh(18);
+                color: white;
+                width: 20px;
+                height: 18px;
+                background-color: $colorPrimary;
+                border-radius: 9px;
+                padding: 1px 6px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 0px;
+                height: 2px;
+                background-color: #A25F4B4D;
+                transition: width .3s ease-in-out;
+            }
+
+
+            &:hover:before{
+                width: 92px;
+            }
+
+
+            &-link{
+                transition: color .3s ease-in-out;
+
+                
+                &:hover{
+                    color: $colorSecondary;
+                }
+            }
+        }
+    }
+}

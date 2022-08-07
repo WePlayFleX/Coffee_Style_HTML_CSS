@@ -1,0 +1,255 @@
+:root {
+    --body-color: #fff;
+    --basic-font: 16px, sans-serif;
+    --accent-color: rgb(102, 131, 51);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    font: var(--basic-font);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 0;
+    background: var(--body-color);
+}
+
+
+.maincontent {
+    flex: 1 0;
+}
+
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+    display: block;
+    color: #000;
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.flex-container {
+    display: flex;
+    max-width: 1000px;
+}
+
+
+.header-container {
+    @include container(var(--header-container));
+}
+
+
+.container-1000 {
+    @include container(1000px);
+}
+
+
+.container--900 {
+    @include container(900px);
+    padding: 0;
+}
+
+
+.section-upper-title{
+    text-transform: uppercase;
+    font-family: $fontKarla;
+    font-weight: 400;
+    letter-spacing: 2px;
+    @include fontSize(12);
+    @include remLh(18);
+    color: white;
+}
+
+
+.section-title{
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(47);
+    @include remLh(60);
+    color: white;
+}
+
+
+.section-descr{
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(17);
+    @include remLh(30);
+    color: white;
+}
+
+
+.products-upper-title{
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(28);
+    @include remLh(40);
+    color: $colorPrimary;
+}
+
+
+.products-story{
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(16);
+    @include remLh(28);
+    color: #1D1F2EB2;
+}
+
+
+.products-full-story-link{
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(15);
+    @include remLh(28);
+}
+
+
+.discount-upper-title{
+    text-transform: uppercase;
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(12);
+    @include remLh(18);
+    letter-spacing: 2px;
+    color: $colorPrimary;
+}
+
+
+.discount-title{
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(36);
+    @include remLh(50);
+    color: $colorPrimary;
+}
+
+
+.discount-desc{
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(16);
+    @include remLh(28);
+    color: #1D1F2EB2;
+}
+
+
+.full-screen-image{
+    margin-top: 130px;
+    height: 340px;
+    width: 1440px;
+    align-self: center;
+}
+
+
+.story-title{
+    width: 284px;
+    margin-top: 29px;
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(20);
+    @include remLh(32);
+    color: $colorPrimary;
+}
+
+
+.story-desc{
+    width: 281px;
+    margin-top: 10px;
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(16);
+    @include remLh(28);
+    color: #1D1F2EB2;
+}
+
+
+.story-date{
+    margin-top: 16px;
+    text-transform: uppercase;
+    font-family: $fontKarla;
+    font-weight: 400;
+    @include fontSize(12);
+    @include remLh(18);
+    letter-spacing: 2px;
+    color: $colorPrimary;
+}
+
+
+.mugs{
+    &-title-link{
+        font-family: $fontKarla;
+        font-weight: 400;
+        @include fontSize(20);
+        @include remLh(30);
+        color: $colorPrimary;
+        margin-top: 35px;
+        transition: color .3s ease-in-out;
+
+
+        &:hover, &:active{
+            color: $colorSecondary;
+        }
+    }
+    
+
+    &-price{
+        font-family: $fontKarla;
+        font-weight: 400;
+        @include fontSize(16);
+        @include remLh(28);
+        color: #1D1F2EB2;
+        margin-top: 5px;
+        
+
+        &--overcross{
+            font-family: $fontKarla;
+            font-weight: 400;
+            @include fontSize(19);
+            @include remLh(32);
+            color: $colorSecondary;
+        }
+
+
+        &-cross{
+            font-family: $fontKarla;
+            font-weight: 400;
+            @include fontSize(16);
+            @include remLh(28);
+            text-decoration: line-through;
+            color: #1D1F2E66;
+            margin-left: 10px;
+        }
+        
+
+        &-crossout{
+            font-family: $fontKarla;
+            font-weight: 400;
+            @include fontSize(16);
+            @include remLh(28);
+            color: #1D1F2EB2;
+            text-decoration: line-through;
+        }
+    }
+}

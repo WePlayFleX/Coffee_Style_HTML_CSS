@@ -1,0 +1,95 @@
+.subscribe-section{
+    position: relative;
+    height: 325px;
+    margin-top: 200px;
+
+
+    &__bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $colorPrimary;
+        z-index: 8;
+    }
+
+
+    &__email{
+        position: relative;
+        z-index: 99;
+        text-align: center;
+
+
+        &-title{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 80px;
+
+
+            &--text{
+                text-transform: uppercase;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(12);
+                @include remLh(18);
+                letter-spacing: 2px;
+                color: white;
+            }
+
+
+            &--line{
+                width: 30px;
+                height: 1px;
+                background-color: #D2D2D51A;
+            }
+
+
+            &--main{
+                margin-top: 15px;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(36);
+                @include remLh(50);
+                color: white;
+            }
+        }
+
+
+        &-input-container{
+            position: relative;
+            z-index: 99;
+            margin-top: 25px;
+
+
+            &--field{
+                margin-right: 10px;
+                width: 350px;
+                height: 55px;
+                border: 1px solid #2F303E;
+                background-color: $colorPrimary;
+                text-transform: uppercase;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(12);
+                @include remLh(18);
+                letter-spacing: 2px;
+                color: white;
+                text-align: center;
+            }
+
+            
+            &--btn{
+                width: 130px;
+                height: 55px;
+                text-transform: uppercase;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(12);
+                @include remLh(18);
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

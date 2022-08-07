@@ -1,0 +1,121 @@
+.footer{
+    margin: 100px auto 50px auto;
+    width: 940px;
+    height: 205px;
+
+
+    &-container{
+        display: flex;
+
+
+        &__desc{
+            margin-right: 55px;
+
+
+            &-text{
+                width: 258px;
+                margin-top: 22px;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(14);
+                @include remLh(22);
+                color: #1D1F2EB2;
+            }
+
+
+            &-date{
+                margin-top: 81px;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(14);
+                @include remLh(22);
+                color: #1D1F2E4D;
+            }
+        }
+
+
+        &__contact{
+            margin-right: 105px;
+    
+
+            &--title{
+                text-transform: uppercase;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(12);
+                @include remLh(18);
+                letter-spacing: 2px;
+                color: $colorPrimary;
+            }
+    
+
+            &--desc{
+                margin-top: 22px;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(14);
+                @include remLh(22);
+                color: #1D1F2EB2;
+            }
+    
+
+            &--email{
+                margin-top: 16px;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(23);
+                @include remLh(36);
+                color: $colorPrimary;
+            }
+    
+
+            &--creator{
+                margin-top: 54px;
+                font-family: $fontKarla;
+                font-weight: 400;
+                @include fontSize(14);
+                @include remLh(22);
+                color: #1D1F2E4D;
+            }
+        }
+    }
+}
+
+
+.nav-footer{
+    margin-right: 80px;
+
+
+    &__title{
+        text-transform: uppercase;
+        font-family: $fontKarla;
+        font-weight: 400;
+        @include fontSize(12);
+        @include remLh(18);
+        letter-spacing: 2px;
+        color: $colorPrimary;
+    }
+
+
+    &__item{
+        margin-top: 10px;
+        &:first-child{
+            margin-top: 22px;
+        }
+    }
+
+
+    &__link{
+        font-family: $fontKarla;
+        font-weight: 400;
+        @include fontSize(14);
+        @include remLh(22);
+        color: #1D1F2EB2;
+        transition: color .3s ease-in-out;
+
+        
+        &:hover, &:active{
+            color: rgba($color: $colorSecondary, $alpha: .7);
+        }
+    }
+}
